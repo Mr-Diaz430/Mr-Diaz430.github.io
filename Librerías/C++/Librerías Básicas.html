@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Biblioteca de programación </title>   
+    <link rel="stylesheet" href="/style/style.css">   
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/306cd3ffad.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/style/image/Logo-ico.ico">
+  </head>
+
+  <body>
+    <!--MENU LATERAL-->
+    <div class="Menu-Lateral close">
+      <div class="detalles-logo">
+        <img class="logo-principal" src="/style/image/Logo.png" alt="Logo">
+        <span class="nombre-logo">Menu</span>
+      </div>
+
+      <ul class="nav-links">
+        <li>
+          <a href="/index.html">
+            <i class='bx bx-home'></i>
+            <span class="nombres-link">Inicio</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="nombres-link" href="/index.html">Inicio</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <div class="icono-link">
+            <a href="#">
+              <i class='bx bxl-c-plus-plus'></i>
+              <span class="nombres-link">C++</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="nombres-link" href="#">C++</a></li>
+            <li><a href="/Librerías/C++/Librerías Básicas.html">Librerías Básicas</a></li>
+            <li><a href="/Librerías/C++/Librerías Estéticas.html">Librerías Estéticas</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <div class="icono-link">
+            <a href="#">
+            <i class="fa-brands fa-java"></i>
+            <span class="nombres-link">Java</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow' ></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="nombres-link" href="#">Java</a></li>
+            <li><a href="/Librerías/Java/Librerías Basicas Java.html">Librerías Básicas</a></li>            
+          </ul>
+        </li>
+
+        <li>
+          <div class="icono-link">
+            <a href="#">
+              <i class='fa-solid fa-gamepad'></i>     
+              <span class="nombres-link">Juegos</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow' ></i> 
+          </div>
+          <ul class="sub-menu">
+            <li><a class="nombres-link" href="#">Juegos</a></li>
+            <li><a href="/Juegos/snake.html">Snake(C++)</a></li>
+            <li><a href="/Juegos/N°-Magico.html">Número Mágico(C++)</a></li>
+            <li><a href="/Juegos/Sky Chasers.html">Sky Chasers(Scratch)</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+  
+  <section class="home-section">
+    <!--MENU SUPERIOR-->
+    <div class="menu-superior">
+      <i class='bx bx-menu' ></i>
+        <span class="text">Biblioteca de programación</span>
+       <img class="logo-iset" src="/style/image/Icono-ISET.png" alt="Logo Iset">
+    </div>
+
+    <!--CONTENIDO-->
+    <div class="contenido">
+  
+      <div class="titulo-contenido">
+        <h1 class="bienvenida">&#60;Librerías Básicas (C++)/></h1>
+      </div>
+
+      <div class="cuerpo-contenido">
+        <p>Bienvenidos a la sección de Librerías básicas, aquí encontrará algunas de las librerías más importantes/usadas y sus funciones más útiles para tener en cuenta a la hora de programar y afrontar diferentes tipos de ejercicios en C++.</p>  
+
+        <section class="lib-basicas">
+          <article class="lib-iostream">
+            <h2 class="h2-2">&#60;Iostream></h2>
+            <p>Es definitivamente la librería más utilizada, tiene muchas funciones sencillas que al incluirlas en nuestro código fuente generalmente evitamos tener que incluir más librerías. Está especializada en la lectura y escritura (input / output) de archivos y es exclusiva de C++.</p>            
+            <table>
+              <caption>Flujo de entrada y salida estándar:</caption>
+              <colgroup>
+                <col>
+              </colgroup>
+              <tr>
+                <td>Cout</td>
+                <td>Flujo de salida estándar</td>
+              </tr>
+              <tr>
+                <td>Cin</td>
+                <td >Flujo de entrada estándar</td>
+              </tr>
+            </table>
+            <p class="ej-uso">Ejemplo de uso:</p>
+            <div class="cod-lib">
+              <pre>
+                <code>
+      1    #include &#60;iostream>	
+      2    int main(){
+      3    int B;
+      4                        
+      5    std::cin>> B; <span class="comentario">/*Ingresa un valor para B desde la consola, funciona como entrada de datos (Input).*/</span>
+      6    
+      7    std::cout&#60;&#60; B; <span class="comentario">/*Muestra el valor de B en la consola, funciona como salida de datos (Output).*/</span>
+      8    
+      9    return 0;
+     10   }
+                </code>
+              </pre>
+            </div>
+          </article>
+
+          <article class="lib-cstdlib" id="lib-cstd">
+            <h2 class="h2-2">&#60;cstdlib> (stdlib.h)</h2>
+            <p> cstdlib (Biblioteca de utilidades generales estándar de C) es un encabezado que define varias funciones de propósito general, incluida la gestión de memoria dinámica, la generación de números aleatorios, la comunicación con el entorno, la aritmética de enteros, la búsqueda, la clasificación y la conversión. Es compatible con C en donde se conoce como stdlib.h.</p>
+            <table>
+              <caption>Entorno:</caption>
+              <colgroup> 
+                <col> 
+              </colgroup>
+              <tr>
+                <td>system("pause")</td>
+                <td>Pausa la ejecución del codigo</td>
+              </tr>
+              <tr>
+                <td>sytem("cls")</td>
+                <td>Limpia consola de todo el texto previo</td>
+              </tr>
+            </table>
+            <p class="ej-uso">Ejemplo de uso:</p>  
+            <div class="cod-lib cod-lib2">
+              <pre>
+                <code>
+      1     #include &#60;iostream>
+      2    #include &#60;cstdlib>
+      3  
+      4    using namespace std;
+      5  
+      6    <span class="comentario">/* ¿Como funciona System en C++?</span>
+      7  
+      8    <span class="comentario">System es una función de un uso muy especial, ya que con ella se pueden hacer cosas muy variadas, podemos decir que sirve para</span> 
+      9    <span class="comentario">manipular el código como si los estuviésemos ingresando por medio de la línea de comandos.</span>
+     10             
+     11    <span class="comentario"> System(" ") tiene muchas funcionalidades tanto practicas como estéticas, pero en este caso solo veremos algunas funciones prácticas</span> 
+     12    <span class="comentario">para nuestros programas. Si desea ver las funciones estéticas de system(" ") puede trasladarse a la sección <a href="/Librerías/C++/Librerías Estéticas.html#lib-cstd-est" class="a-estetica">librerías estéticas (C++)</a>.*/</span>
+     13             
+     14    int main(){
+     15    int N=5;
+     16 
+     17    <span class="comentario">//Realizamos un simple bucle para poner en práctica la utilidad de system.</span>
+     18 		
+     19    for(int i=0; i&#60;3; i++){      
+     20   
+     21    N = N + i;
+     22   cout&#60;&#60;N&#60;&#60;endl&#60;&#60;endl;
+     23   
+     24   system("pause");  <span class="comentario">/*El programa espera que el usuario presione una tecla para ejecutar la siguiente línea de código con el texto</span>
+     25                                     <span class="comentario">NO personalizable "Presione una tecla para continuar..."*/</span>
+     26  
+     27    system("cls"); <span class="comentario">/*Limpia consola de todo el texto previo (Esto es muy útil si queremos realizar una nueva operación o sub proceso</span>
+     28                              <span class="comentario">y queremos que el usuario ya no vea los datos que le dimos previamente).*/</span>
+     29    }
+     30 	 return 0;
+     31   
+     32     <span class="comentario">/*Otra alternativa al system("pause") para pausar el programa es getch(); la cual viene incluida en la</span>
+     33    <span class="comentario">librería &#60;conio.h> (solo disponible para sistemas operativos Windows.*/</span>
+     34    }
+                </code>
+              </pre>
+            </div>
+            <table>
+              <caption>Generación de secuencias pseudoaleatorias:</caption>
+              <colgroup> 
+                <col> 
+              </colgroup>
+              <tr>
+                <td>rand</td>
+                <td>Generación de números aleatorios</td>  
+              </tr>
+              <tr>
+                <td>srand</td>
+                <td>Inicializa el generador de números aleatorio</td>
+              </tr>
+            </table>
+            <p class="ej-uso">Ejemplo de uso y problemas frecuentes:</p>
+            <div class="cod-lib cod-lib2">
+              <pre>
+                <code>
+      1     #include &#60;iostream>	
+      2    #include &#60;cstdlib>
+      3    #include &#60;ctime>
+      4              
+      5    using namespace std;
+      6              
+      7    int main(){
+      8               
+      9   <span class="comentario">// srand(): Inicializa el generador de números aleatorio. </span> 
+     10               
+     11   <span class="comentario"> // rand(): Retorna un número integral de manera pseudo-aleatorio entre 0 y un valor máximo (este valor máximo está dado por la  </span>
+     12                      <span class="comentario">constante RAND_MAX que viene incluida dentro de la librería cstdlib). </span> 
+     13               
+     14    cout&#60;&#60; RAND_MAX &#60;&#60;endl;<span class="comentario"> /*RAND_MAX: Es una constante que determina el valor máximo del generador de números</span>  
+     15                                                     <span class="comentario">"aleatorios" (el valor de esta constante dependerá del compilador).*/ </span>
+     16                
+     17    /*------------------------------------------------------------------------------------------------------
+     18    <span class="comentario">Problema 1:</span> 
+     19                
+    20     <span class="comentario">Al usar rand() este generará un número de forma "aleatoria", número el cual al terminar la ejecución de nuestro programa NO</span> 
+    21      <span class="comentario">cambiará, lo que perjudica nuestras intenciones de usar rand() para generar números de forma aleatoria.</span>
+    22               
+    23     <span class="comentario">Solución:</span>
+    24    <span class="comentario"> Esto sucede porque rand() no está cambiando la serie que genera, por lo que para obtener números diferentes en cada ejecución</span>  
+    25     <span class="comentario">primero debemos establecer un punto de partida o un valor inicial.</span>
+    26                
+    27     <span class="comentario">Para ello usaremos nuestra función srand() para darle un valor inicial tal que nuestro rand() cambie con cada</span> 
+    28     <span class="comentario">ejecución: El valor inicial/parámetro que le daremos a srand() será la variable time(0) que viene integrada en la librería</span>  
+    29    <span class="comentario">&#60;ctime> (por lo que también debemos agregarla en la parte superior de nuestro código). Time() nos devuelve un valor de tiempo que variara dependiendo la hora de nuestra PC.</span>
+    30     <span class="comentario">Con esto nos aseguraremos de que el valor de rand() nunca sea el mismo.</span>
+    31     */          
+    32              
+    33     srand((unsigned)time(0)); <span class="comentario">/*Recibe un valor inicial sin signo por parte de la variable time(). </span>
+    34                                                        <span class="comentario">Otra forma de escribirlo podría ser: srand(time(NULL)). */</span>
+    35       
+    36      cout &#60;&#60; rand()  &#60;&#60;endl; <span class="comentario">//Selecciona un número entre 0 y RAND_MAX.</span>             
+    37     /*-------------------------------------------------------------------------------------------------
+    38                
+    39     <span class="comentario">Problema 2: Generar números aleatorios entre rangos.</span>
+    40                
+    41     <span class="comentario">A) Si usted ha probado el código escrito anteriormente se dará cuenta de que los números que rand() suele retornar son un poco grandes,</span>
+    42        <span class="comentario">por lo que si por alguna razón desea establecer un valor máximo de números aleatorios que se puedan generar, lo podemos hacer</span> 
+    43        <span class="comentario">con la operación matemática MOD(%):</span>
+    44                 
+    45    <span class="comentario">Solucion:  */</span>
+    46
+    47     cout &#60;&#60; (rand() % 11)  &#60;&#60;endl; <span class="comentario">//Seleccionará un número entre 0 y 10</span>
+    48         
+    49<span class="comentario">    /*</span> 
+    50     <span class="comentario">  B) De igual manera que podemos limitar el valor máximo podemos establecer un valor mínimo, lo que debemos hacer es sumarle al</span> 
+    51           <span class="comentario">(rand() % Número-Máximo) un número desde el cual queremos que inicie nuestro generador de números "aleatorios". Pero al hacer esto nuestro  </span>
+    52           <span class="comentario">Número-Máximo deberá cambiar de la siguiente manera:</span>     
+    53                          
+    54     <span class="comentario">1. cout &#60;&#60; (rand() % NumeroMaximo)  &#60;&#60;endl; //La variable NumeroMaximo limita el valor máximo de números - 1 que rand() pueda generar.</span>
+    55                     
+    56     <span class="comentario">2. cout &#60;&#60; (rand() % NumeroMaximo) + NumeroMinimo  &#60;&#60;endl; // Al darle un Valor mínimo a nuestro generador,</span> 
+    57                                       <span class="comentario">nuestro NumeroMaximo tiene que pasar a ser la diferencia (resta) entre NumeroMaximo y NumeroMinimo</span>
+    58                                       <span class="comentario">para poder mantener el rango de valores que nosotros deseamos tener.</span>
+    59                     
+    60     <span class="comentario">3. cout &#60;&#60; (rand() % [NumeroMaximo - NumeroMinimo]) + Numero-Minimo  &#60;&#60;endl; //Esto nos dará como resultado un generador que se mantenga en el intervalo de números que deseemos.</span>
+    61      
+    62            <span class="comentario">Esto sucede porque al agregar una suma con el valor mínimo no solo estamos modificando el valor mínimo de rand(), que recordemos que es 0,</span>                                                                   
+    63            <span class="comentario">sino también modificaremos el resultado del módulo por lo cual es importante tener en cuenta todo lo visto. A continuación se realizará lo mismo</span>
+    64             <span class="comentario">, pero  reemplazando las variables Numero-Maximo y Numero-Minimo por números.</span>
+    65               
+    66                 
+    67                <span class="comentario">EJ: Nuestra meta es conseguir un rand() con un rango de números de 10 a 20.  */</span>
+    68                 
+    69               cout &#60;&#60; (rand() % 21)  &#60;&#60;endl;  <span class="comentario">//Selecciona un número entre 0 y 20.</span>
+    70                   
+    71                cout &#60;&#60; (rand() % 21) + 10  &#60;&#60;endl; <span class="comentario">//Selecciona un número entre un rango de números no deseado con un Valor-Minimo: 10.</span>
+    72                  
+    73               cout &#60;&#60; (rand() % 11) + 10  &#60;&#60;endl; <span class="comentario">//Selecciona un número entre 10 y 20. Recuerda que el 11 surge de la diferencia entre 21 - 10.</span>
+    74                  
+    75              return 0;  
+    76              }                
+                </code>
+              </pre>
+            </div>
+
+            <table>
+              <caption>Aritmética entera:</caption>
+              <colgroup> 
+                <col> 
+              </colgroup>
+              <tr>
+                <td>abs</td>
+                <td>Valor absoluto</td>
+              </tr>
+            </table>
+            <p class="ej-uso">Ejemplo de uso:</p>  
+            <div class="cod-lib">
+              <pre>
+                <code>
+     1     #include &#60;iostream>
+     2    #include &#60;cstdlib>
+     3  
+     4     using namespace std;
+     5  
+     6     <span class="comentario">//Este programa determina el valor absoluto de un número entero.</span>
+     7  
+     8     int main(){
+     9      int N=-10, R;
+    10     
+    11      <span class="comentario">//abs(número-entero): obtiene el valor absoluto de un número entero (int).</span>
+    12      
+    13      R=abs(N);
+    14      cout&#60;&#60;"\nEl valor absoluto de "&#60;&#60;N&#60;&#60;" es: "&#60;&#60;R&#60;&#60;endl; // R=10
+    15    
+    16      <span class="comentario">//Recordar que si usamos abs( ) con la libreria &#60;cstdlib> este solo podra recibir valores enteros, de lo contrario</span>
+    17        <span class="comentario">dara error y no nos dejara ejecutar el codigo. Pero si declaramos la libreria &#60;cmath> en nuestro codigo si podremos</span> 
+    18        <span class="comentario">usar valores flotantes en la funcion abs( ).</span>
+    19
+    20        return 0;
+    21     }                    
+                </code>
+              </pre>
+            </div>
+          </article>
+
+          <article class="lib-cmath">
+            <h2 class="h2-2">&#60;cmath> (math.h)</h2>
+            <p>Declara un conjunto de funciones principalmente para operaciones matemáticas y transformaciones. Se puede usar tanto en C++ como en C donde es conocida como math.h .</p>
+            <table>
+              <caption>Funciones trigonométricas:</caption>
+              <colgroup>
+                <col>
+              </colgroup>
+              <tr>
+                <td>cos</td>
+                <td>Calcula coseno</td>
+              </tr>
+              <tr>
+                <td>sin</td>
+                <td>Calcula seno</td>
+              </tr>
+              <tr>
+                <td>tan</td>
+                <td>Calcula tangente</td>
+              </tr> 
+            </table>
+            <p class="ej-uso">Ejemplo de uso:</p>
+            <div class="cod-lib cod-lib2">
+              <pre>
+                <code>
+      1     #include  &#60;iostream>
+      2    #include  &#60;cstdlib>
+      3    #include  &#60;cmath>
+      4  
+      5     using namespace std;
+      6  
+      7     <span class="comentario">/*Tener en cuenta que sin, cos y tan deben recibir parámetros en radianes por lo que primero debemos realizar la conversión de grados a radianes.*/</span>
+      8  
+      9     int main(){
+     10     float grad ,rad , PI=3.1415926536, seno, coseno, tangente;
+     11     
+     12     cout&#60;&#60;"Ingrese un angulo en grados: "; <span class="comentario">// le asignamos a nuestra variable grad el valor ingresado en grados</span>
+     13     cin>>grad;
+     14    
+     15     rad = grad * (PI / 180); <span class="comentario">// Mediante esta operación logramos transformar los grados ingresados anteriormente en radianes.</span>
+     16     
+     17     
+     18     coseno = cos(rad); <span class="comentario">// cos() retornará el coseno de un ángulo de x radianes. Y la guardamos en nuestra variable coseno.</span>
+     19     
+     20     seno = sin(rad); <span class="comentario">// sin() retornará el seno de un ángulo de x radianes. Y la guardamos en nuestra variable seno.</span>
+     21   
+     22     tangente = tan(rad); <span class="comentario">// tan() retornará la tangente de un ángulo de x radianes. Y la guardamos en nuestra variable tangente.</span>
+     23     
+     24
+     25     cout&#60;&#60;"\n El coseno es: "&#60;&#60;coseno;
+     26     cout&#60;&#60;"\n El seno es: "&#60;&#60;seno;
+     27     cout&#60;&#60;"\n la tangente es: "&#60;&#60;tangente&#60;&#60;endl&#60;&#60;endl;
+     28   
+     29     system("pause");
+     30     return 0;
+     31   }              
+                </code>
+              </pre>
+            </div>
+
+            <table>
+              <caption>Funciones de potencia:</caption>
+              <colgroup>
+                <col>
+              </colgroup>
+
+              <tr>
+                <td>pow</td>
+                <td>Elevar a potencia</td>
+              </tr>
+
+              <tr>
+                <td>sqrt</td>
+                <td>Calcular la raíz cuadrada</td>
+              </tr>
+
+              <tr>
+                <td>cbrt</td>
+                <td>Calcular la raíz cubica</td>
+              </tr>
+            </table>
+            
+            <p class="ej-uso">Ejemplo de uso:</p>
+            <div class="cod-lib">
+              <pre>
+                <code>
+      1      #include &#60;iostream>
+      2     #include &#60;cstdlib>
+      3     #include &#60;cmath>
+      4  
+      5     using namespace std;
+      6  
+      7     int main(){
+      8    
+      9     float N, P, raizcuad, raizcub, potencia;
+     10     
+     11      cout&#60;&#60;"Ingrese un numero: ";
+     12     cin>>N;
+     13     
+     14     cout&#60;&#60;"\nIngrese una potencia: ";
+     15     cin>>P;
+     16     
+     17     raizcuad = sqrt(N); <span class="comentario">//sqrt() Calcula la raíz cúbica cuadrada de N.</span>
+     18     
+     19     raizcub = cbrt(N); <span class="comentario">//cbrt() Calcula la raíz cúbica de N.</span>
+     20     
+     21     potencia = pow(N , P); <span class="comentario">//pow() Realiza una potencia entre N (base) y P (exponente).</span>
+     22     
+     23    system("cls");
+     24   
+     25    cout&#60;&#60;"La raiz cuadrada de "&#60;&#60;N&#60;&#60;" es: "&#60;&#60;raizcuad&#60;&#60;endl;
+     26   
+     27    cout&#60;&#60;"La raiz cubica de "&#60;&#60;N&#60;&#60;" es: "&#60;&#60;raizcub&#60;&#60;endl;
+     28     
+     29    cout&#60;&#60;N&#60;&#60;" elevado a "&#60;&#60;P&#60;&#60;" es: "&#60;&#60;potencia&#60;&#60;endl&#60;&#60;endl;
+     30       
+     31     system("pause");
+     32     return 0;
+     33   }   
+                </code>
+              </pre>
+            </div>
+          </article>
+
+          <article class="lib-c-cplus">
+            <h2 class="h2-2">Librerías de C en C++</h2>
+            <p class="p-ult">Esta es una lista con la mayoría de librerías que se utilizaban en C y que han sido convertidas para que puedan usarse también en C++. Para aclarar y como se mostró en ejemplos anteriores, las librerías en C usan una extensión <b class="re-cuadro">.h</b> al final del nombre, pero en C++ esta extensión se excluye y en su lugar se añade una <b class="re-cuadro">c</b> al inicio del nombre de la librería. Por ejemplo &#60;math.h> (C) pasa a ser &#60;cmath>(C++).  
+            </p>
+            <div class="cod-lib cod-lib2">
+              <pre class="cod-fnl">
+                <code>
+  #include &#60;cassert>        //Nos ayuda a encontrar las aserciones dentro de un programa. (especifica una condición que se espera que sea cierta).
+
+  #include &#60;cctype>         /*Declara un conjunto de funciones para clasificar y transformar caracteres. individuales. 
+                                              EJ: Comprueba si un carácter es alfanumérico.*/
+    
+  #include &#60;cerrno>          /*En ella se definen las macros que presentan un informe de error a través de códigos de error. 
+                                              EJ: resultados de un parámetro fuera de una función de dominio, por ejemplo, sqrt (-1).*/
+
+  #include &#60;cfloat>           //Contiene parámetros de entorno, información sobre limitaciones y rangos para tipos reales.
+
+  #include &#60;ciso646>       /*Este encabezado define once constantes de macro con grafías alternativas para aquellos operadores de C++ que no son compatibles
+                                               con el juego de caracteres estándar ISO646 EJ:  &&,  &=,  &,  |,  ~,  !,   !=,  ||,  |=,  ^  y  ^= */ .
+
+  #include &#60;climits>         //Contiene parámetros de entorno, información sobre limitaciones y rangos para tipos enteros.
+
+  #include &#60;clocale>        /*Contiene los prototipos de Las funciones, macros, y tipos para manipular y controlar varias opciones pertenecientes
+                                                a la Localidad del sistema.*/
+    
+  #include &#60;cmath>         //Contiene funciones para operaciones matemáticas y transformaciones.
+
+  #include &#60;csetjmp>      //Proporciona "saltos no locales": control de flujo que se desvía de la llamada sub-rutina habitual y la secuencia de retorno.
+
+  #include &#60;csignal>        //Contiene las funciones, macros, y tipos para crear y manipular señales del sistema.
+  
+  #include &#60;cstdarg>       //Define macros para acceder a Los argumentos individuales de una lista de argumentos sin nombre.
+  
+  #include &#60;cstddef>      /*Este encabezado define varios tipos implícitamente generados o usados por ciertas expresiones de Lenguaje.
+                                             Ej: para definir macros como NULL y tipos de datos muy útiles como ptrdiff_t*/
+
+  #include &#60;cstdio>         //Biblioteca encargada de realizar operaciones de entrada/salida con printf y scanf.
+  
+  #include &#60;cstdlib>        //Biblioteca de utilidades generales estándar.
+  
+  #include &#60;cstring>       //Define varias funciones para manipular cadenas y arrays.
+  
+  #include &#60;ctime>         //Contiene definiciones de funciones para obtener y manipular información de fecha y hora.
+  
+                </code>
+              </pre>
+            </div>
+          </article>
+        </section>
+      </div>
+    </div>
+
+    <!--FOOTER-->
+    <footer id="footer"> 
+
+      <div class="footer-sup">
+
+        <div class="box-footer">
+          <figure>
+            <img src="/style/image/logo-titulo-removebg.png" alt="logo">            
+          </figure>
+        </div>
+
+        <div class="box-footer2">
+          <h2>SOBRE NOSOTROS</h2>
+          <p>Somos estudiantes del instituto superior de educación tecnológica</p>
+          <p>Y desarrollamos esta página web como proyecto final para las materias algoritmo I, programación I y taller de programación.</p>
+        </div>
+
+        <div class="box-footer3">
+          <h2>CONTACTO</h2>
+          <p><i class="fa-solid fa-envelope"></i> Mr.diaz430@gmail.com</p>
+        </div>
+
+      </div>
+
+      <div class="footer-inf">
+        <p><small>&copy; 2023 <b>Devs EM</b> - Todos los Derechos Reservados</small></p>
+      </div>
+
+    </footer>
+  </section>
+
+  <script src="/script.js"></script>
+</body>
+</html>

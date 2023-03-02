@@ -1,0 +1,668 @@
+/* Google Fonts Link para Importar */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  overflow: hidden;
+}
+
+.detalles-logo{
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.detalles-logo .logo-principal{
+  width: 70px;
+  margin-right: 4px;
+}
+
+.detalles-logo .nombre-logo{ /*Texto superior del Menu Lateral*/
+  text-shadow: 0.2px 0.2px #fff;
+  margin-left: 32px;
+}
+
+.Menu-Lateral{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 260px;
+  background: #11101d;
+  z-index: 100;
+  transition: all 0.5s ease;
+}
+
+.Menu-Lateral.close{
+  width: 78px;
+}
+
+.Menu-Lateral .detalles-logo{
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.Menu-Lateral .detalles-logo i{
+  font-size: 30px;
+  color: #fff;
+  height: 50px;
+  min-width: 78px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.Menu-Lateral .detalles-logo .nombre-logo{
+  font-size: 22px;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s ease;
+  transition-delay: 0.1s;
+}
+
+.Menu-Lateral.close .detalles-logo .nombre-logo{
+  transition-delay: 0s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.Menu-Lateral .nav-links{
+  height: 100%;
+  padding: 30px 0 150px 0;
+  overflow: auto;
+}
+
+.Menu-Lateral.close .nav-links{
+  overflow: visible;
+}
+
+.Menu-Lateral .nav-links::-webkit-scrollbar{
+  display: none;
+}
+
+.Menu-Lateral .nav-links li{
+  position: relative;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+
+.Menu-Lateral .nav-links li:hover{
+  background: #1d1b31;
+}
+
+.Menu-Lateral .nav-links li .icono-link{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Menu-Lateral.close .nav-links li .icono-link{
+  display: block
+}
+
+.Menu-Lateral .nav-links li i{
+  height: 50px;
+  min-width: 78px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Menu-Lateral .nav-links li.showMenu i.arrow{ 
+  transform: rotate(-180deg);
+}
+
+.Menu-Lateral.close .nav-links i.arrow{
+  display: none;
+}
+
+.Menu-Lateral .nav-links li a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.Menu-Lateral .nav-links li a .nombres-link{
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
+.Menu-Lateral.close .nav-links li a .nombres-link{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.Menu-Lateral .nav-links li .sub-menu{
+  padding: 6px 6px 14px 80px;
+  margin-top: -10px;
+  background: #1d1b31;
+  display: none;
+}
+
+.Menu-Lateral .nav-links li.showMenu .sub-menu{ 
+  display: block;
+}
+
+.Menu-Lateral .nav-links li .sub-menu a{
+  color: #fff;
+  font-size: 15px;
+  padding: 5px 0;
+  white-space: nowrap;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.Menu-Lateral .nav-links li .sub-menu a:hover{
+  opacity: 1;
+}
+
+.Menu-Lateral.close .nav-links li .sub-menu{
+  position: absolute;
+  left: 100%;
+  top: -10px;
+  margin-top: 0;
+  padding: 10px 20px;
+  border-radius: 0 6px 6px 0;
+  opacity: 0;
+  display: block;
+  pointer-events: none;
+  transition: 0s;
+}
+
+.Menu-Lateral.close .nav-links li:hover .sub-menu{
+  top: 0;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+}
+
+.Menu-Lateral .nav-links li .sub-menu .nombres-link{
+  display: none;
+}
+
+.Menu-Lateral.close .nav-links li .sub-menu .nombres-link{
+  font-size: 18px;
+  opacity: 1;
+  display: block;
+}
+
+.Menu-Lateral .nav-links li .sub-menu.blank{  
+  opacity: 1;
+  pointer-events: auto;
+  padding: 3px 20px 6px 16px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.Menu-Lateral .nav-links li:hover .sub-menu.blank{
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.home-section{
+  overflow: auto;
+  position: relative;
+  background: #E4E9F7;
+  height: 100vh;
+  left: 260px;
+  width: calc(100% - 260px);
+  transition: all 0.5s ease;
+}
+
+.Menu-Lateral.close ~ .home-section{
+  left: 78px;
+  width: calc(100% - 78px);
+}
+
+/*-- MENU SUPERIOR --*/
+.menu-superior{
+  background-color: #3371af;
+  height: 80px;
+  color: #fff;
+  padding: 0 10px 20px;
+  /*-- flex --*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-superior .logo-iset{
+  width: 100px;
+  padding-top: 15px;
+}
+
+.home-section .menu-superior .bx-menu{
+  color: #11101d;
+  font-size: 35px;
+}
+
+.home-section .menu-superior .bx-menu{
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.home-section .menu-superior .text{
+  font-size: 20px;
+  font-weight: 600;
+  text-shadow: 1.5px 1.5px #333;
+}
+
+.menu-superior i:hover{
+  border-radius: 5px;
+  background-color: #5c8fc1;
+}
+
+/*-- CONTENIDO --*/
+.contenido{
+  width: 100%;
+  height: auto;
+}
+
+ .contenido .titulo-contenido{
+   background-color: #fff;
+   border-radius: 30px;
+   width: 80%;
+   height: auto;
+   margin: 35px auto 60px;
+   padding: 12px;
+   font-size: 45px;
+   font-family: Arial;
+   box-shadow: 0 0 30px 1px #333;  
+}
+
+.contenido .cuerpo-contenido{
+  background-color: #fff;
+  border-radius: 30px;
+  width: 80%;
+  height: auto;
+  margin: 0 auto 20px;
+  padding: 35px;
+  box-shadow: 0 -25px #11101d;
+}
+
+
+/*CONTENIDO - LIBRERIAS BASICAS y ESTETICAS*/
+/*codigo para los textos generales*/
+
+.contenido .titulo-contenido h1.bienvenida{
+  text-align: center;
+  font-size: 45px;
+}
+
+.contenido .cuerpo-contenido .h2-2{
+  margin-top: 50px;
+}
+
+.contenido .cuerpo-contenido .p-esp{ /*espacio entre parrafos*/
+  margin-bottom: 15px;
+  margin-top: 8px;
+}
+
+.lib-basicas .lib-c-cplus .p-ult{   /*p-ult - separa el parrafo final del video*/
+  margin-bottom: 25px;      
+}                         
+
+.contenido .cuerpo-contenido .ej-uso{ /*Estilo para el texto de ejemplo*/
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+.contenido .cuerpo-contenido .a-estetica{ /*Estilos para el link en el texto de <cstdlib>*/
+  text-decoration:none;
+  color: #3271af;
+}
+
+.contenido .cuerpo-contenido .a-estetica:hover{ /*hover para link de <cstdlib>*/
+  color: rgb(167, 186, 204);
+}
+
+.contenido .cuerpo-contenido .ul-index li{
+  list-style:none; /*Elimina los puntos del ul*/
+  padding-left: 10px;
+  margin-bottom: 7px;
+  margin-top: 10px; /*afecta la separacion del sub-titulo caracteristicas*/
+
+  border-radius: 5px;
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-left-color: #333;
+}
+
+a.Link-scratch{
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+
+  margin-top:20px;
+  margin-left: 15%;
+}
+
+.contenido .cuerpo-contenido video{
+  width: 100%;
+}
+
+.imagen{   /*Ancho para imagenes - cambian de distinta forma al entrar en modo celular*/
+  width: 100%;
+}
+
+.imagen2{    /*para imagenes medianas*/
+  width: 100%;
+}
+
+.imagen3{ /*Imagen larga*/
+  width: 100%;
+}
+
+/*codigo de tablas*/
+.contenido .cuerpo-contenido table{
+  width: 100%;
+  margin-top: 8px;
+  font-size: 13px;
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+
+.contenido .cuerpo-contenido table caption{  
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-left-color: #333;
+
+  font-size: 17px;
+  font-weight: 600;
+  text-align: start;
+}
+
+.contenido .cuerpo-contenido table td{
+ border: 1px solid #333;
+ padding: 5px;
+}
+
+.contenido .cuerpo-contenido table col{
+  background-color: #eee;
+  width: 150px;
+}
+
+/*------------------------------------------------------------------*/
+/*Cuadro de ejemplos*/
+.contenido .cuerpo-contenido .cod-lib{   /*Borde exterior de los cuadros de ejemplo*/                                   
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.contenido .cuerpo-contenido .cod-lib pre{ /*Caja interior de los cuadros de ejemplo*/
+  font-size: 15px;
+  width: 100%;
+  overflow: auto;
+  border-radius: 5px;
+  background-color: #f6f6f6;
+}
+
+.contenido .cuerpo-contenido .cod-lib2 pre{ /*Le damos una altura fija a las tablas demaciado grandes*/
+  height: 500px;                              
+}
+
+.cod-lib pre code .comentario{
+  color: rgb(192, 26, 26)
+}
+
+.contenido .cuerpo-contenido .borde-cent{  /*para centrar imagenes*/
+width: 100%;
+/*-- flex --*/
+display: flex;
+justify-content: center;
+}
+
+.contenido .cuerpo-contenido .cod-lib3{ /*Borde personalizado para imagenes medianas - Lib.esteticas */
+  margin-bottom: 20px;
+  width: 70%;
+  padding: 5px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.contenido .cuerpo-contenido .cod-lib4{ /*Borde personalizado para imagenes largas - Lib.esteticas */
+  margin-bottom: 20px;
+  width: 25%;
+  padding: 5px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+/*--------------------------------------------------------------------------*/
+/*Descripcion final de seccion-librerias basicas*/
+
+.contenido .cuerpo-contenido .re-cuadro{
+  color: #fff;
+  background-color: #333333b3;
+  padding: 0 4px;
+  border: 0.5px solid #333;
+  border-radius: 3px;
+}
+
+.contenido .cuerpo-contenido .re-cuadro-2{
+  background-color: #f8f8f8;
+  padding: 0 4px;
+  border: 0.5px solid #333;
+  border-radius: 3px;
+}
+
+.contenido .cuerpo-contenido .lib-c-cplus .cod-fnl{  /*Esta seccion es para darle stylos al ultimo cuadro <pre>*/
+  padding: 5px;     
+  font-size: 15px;
+  width: 100%;
+  overflow: auto;
+  border-radius: 5px;
+  background-color: #293134;
+  color: #847890;
+}
+
+/*CONTENIDO - JUEGOS*/
+.titulo-codigo{
+  width: 100%;
+
+  font-size: 30px;
+  text-align: center;
+
+  background-color: #7470ac;
+  color: aliceblue;
+
+  border-radius: 20px;
+  border: solid #5c58a7;
+  border-width: 0px 0px 17px;
+}
+
+.toc1{          
+  margin-top: 8px;          
+  margin-bottom: 50px;
+  margin-left: 8px;
+}
+
+.ptexto{
+  margin-top: 9px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+
+  font-size: 17px;
+  font-weight: 600;
+  text-align: start;
+  
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-left-color: #333;
+}
+
+.contenido .cuerpo-contenido .esp{ /*Da espacio entre el titulo final y la imagen de el Nunero Magico*/
+  margin-bottom: 8px;
+}
+
+/*---------------------------------------------------------------*/
+/*-- FOOTER --*/
+footer{
+  color: #fff;
+  width: 100%;
+}
+
+footer .footer-sup {             /*Footer Superior*/
+  background-color: #3371af;  
+  width: 100%;
+  gap: 20px; 
+  /*-- flex --*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer .footer-sup .box-footer figure img{
+  width: 350px; 
+}
+
+footer .footer-sup .box-footer{   /*Caja 1 - Footer-sup*/
+  padding: 50px 0;
+  margin-left: 40px; 
+}
+
+footer .footer-sup .box-footer2{  /*Caja 2 - Footer-sup*/
+  width: 250px;
+  min-width: 200px;
+  padding-top:17px;
+  font-size: 12px;
+}
+
+footer .footer-sup .box-footer3{  /*Caja 3 - Footer-sup*/
+  padding-top:17px;
+  margin-right: 210px;
+  font-size: 12px;
+  min-width: 180px;
+}
+
+footer .footer-sup .box-footer2 h2, footer .footer-sup .box-footer2 p, footer .footer-sup .box-footer3 h2{
+  padding-bottom: 8px; 
+}
+
+footer .footer-inf{
+  width: 100%;
+  background-color: #1d4063; 
+  text-align: center;
+}
+
+/*DISPOSITIVOS MOBILES*/
+@media screen and (max-width: 890px){
+  .contenido .titulo-contenido h1.bienvenida{
+    font-size: 30px;
+  }
+
+  .Menu-Lateral{
+    width: 240px;
+  }
+  .Menu-Lateral.close{
+    width: 78px;
+  }
+  .Menu-Lateral .profile-details{
+    width: 240px;
+  }
+  .Menu-Lateral.close .profile-details{
+    background: none;
+  }
+  .Menu-Lateral.close .profile-details{
+    width: 78px;
+  }
+  .home-section{
+    left: 240px;
+    width: calc(100% - 240px);
+  }
+  .Menu-Lateral.close ~ .home-section{
+    left: 78px;
+    width: calc(100% - 78px);
+  }
+
+ 
+  /*oculta la imagen sobresaliente del borde - Adivina el numero*/
+  .contenido .cuerpo-contenido .cont-img{
+    overflow: hidden;
+  }
+
+  .imagen{          /*Cambia el tamaño de la imagen de - N° Magico*/
+    width: 700px;
+  }
+
+  .imagen2{        /*Cambia el tamaño de las imagenes de - Libreria esteticas*/
+    width: 550px;
+  }
+
+  .contenido .cuerpo-contenido .cod-lib3{  /*Cambia el tamaño de la caja de las imagenes de libreria estetica*/
+    width: 100%;
+  }
+
+  .imagen3{
+    width: 200px;
+  }
+
+  .contenido .cuerpo-contenido .cod-lib4{
+    width: 38.8%;
+  }
+
+  footer .footer-sup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+  footer .footer-sup .box-footer{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  /*-- flex --*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  footer .footer-sup .box-footer2{
+    padding: 0;
+    margin-top: -10px;
+    width: 100%;
+    text-align: center;
+}
+  footer .footer-sup .box-footer3{
+    padding: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;   
+}}
+
+@media screen and (max-width: 640px){
+
+  .home-section .menu-superior span{
+    display: none;
+  }
+
+
+  .contenido .cuerpo-contenido article h2.h2-2{
+    font-size: 20px;
+  }
+
+ p{
+  font-size: 15px;
+ }
+}

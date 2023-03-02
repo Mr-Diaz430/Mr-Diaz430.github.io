@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Biblioteca de programación </title>   
+    <link rel="stylesheet" href="/style/style.css">   
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/306cd3ffad.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/style/image/Logo-ico.ico">
+   </head>
+
+  <body>
+    <!--MENU LATERAL-->
+    <div class="Menu-Lateral close">
+      <div class="detalles-logo">
+      <img class="logo-principal" src="/style/image/Logo.png" alt="Logo">
+      <span class="nombre-logo">Menu</span>
+    </div>
+
+    <ul class="nav-links">
+      <li>
+        <a href="/index.html">
+          <i class='bx bx-home'></i>
+          <span class="nombres-link">Inicio</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="nombres-link" href="/index.html">Inicio</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="icono-link">
+          <a href="#">
+            <i class='bx bxl-c-plus-plus'></i>
+            <span class="nombres-link">C++</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="nombres-link" href="#">C++</a></li>
+          <li><a href="/Librerías/C++/Librerías Básicas.html">Librerías Básicas</a></li>
+          <li><a href="/Librerías/C++/Librerías Estéticas.html">Librerías Estéticas</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="icono-link">
+          <a href="#">
+            <i class="fa-brands fa-java"></i>
+            <span class="nombres-link">Java</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="nombres-link" href="#">Java</a></li>
+          <li><a href="/Librerías/Java/Librerías Basicas Java.html">Librerías Básicas</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="icono-link">
+          <a href="#">
+            <i class='fa-solid fa-gamepad'></i>     
+            <span class="nombres-link">Juegos</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i> 
+        </div>
+        <ul class="sub-menu">
+          <li><a class="nombres-link" href="#">Juegos</a></li>
+          <li><a href="/Juegos/snake.html">Snake(C++)</a></li>
+          <li><a href="/Juegos/N°-Magico.html">Número Mágico(C++)</a></li>
+          <li><a href="/Juegos/Sky Chasers.html">Sky Chasers(Scratch)</a></li>
+        </ul>
+      </li>
+
+   </ul>
+  </div>
+
+  
+  <section class="home-section">
+  <!--MENU SUPERIOR-->
+    <div class="menu-superior">
+      <i class='bx bx-menu' ></i>
+      <span class="text">Biblioteca de programación</span>
+      <img class="logo-iset" src="/style/image/Icono-ISET.png" alt="Logo Iset">
+    </div>
+
+  <!--CONTENIDO-->
+    <div class="contenido">
+      <div class="titulo-contenido">
+        <h1 class="bienvenida">&lt;Número Mágico (C++)/></h1>
+      </div>
+
+      <div class="cuerpo-contenido">
+        <p>Bienvenido al apartado de juegos, En esta sección te mostraremos la codificación de un juego en particular, con la intención de que seas capaz de presenciar un poco de lo que es posible de realizar con un lenguaje de programación sin tener conocimientos avanzados. Puedes probar el juego desde tu entorno de desarrollo únicamente copiando el código del proceso.</p>
+
+        <h2 class="titulo-codigo h2-2">Adivina el número!</h2>
+        <p class="toc1">
+          El número mágico es un juego en que tienes que utilizar tu lógica para adivinar un número secreto que el ordenador escoge al principio del partido. 
+        </p>
+        <h2 class="titulo-codigo">Como jugarlo </h2>
+        <p class="toc1">
+          El número está formado por dígitos del 1 al 100; cada dígito aparece una vez como máximo. Tienes que adivinar el número con la menor cantidad de intentos posible, un intento consta de un número propuesto por el jugador y la respuesta del ordenador. Al finalizar el ordenador te informa cuantos intentos de tomo descubrir el número secreto.     
+        </p>
+        <h2 class="titulo-codigo">Codigo</h2>
+        <p class="ptexto">Primero Importamos las Librerías que usaremos</p>
+        <div class="cod-lib">
+          <pre><code>
+        #include &lt;iostream&gt;
+        #include &lt;cstdlib&gt;
+        #include &lt;ctime&gt;
+          </code></pre>
+        </div>
+        <p class="ptexto">Metodo Principal usando while</p>
+        <div class="cod-lib">
+          <pre><code>
+        int main() {
+          srand(time(NULL));  // inicializar el generador de numeros aleatorios
+          int numeroSecreto = rand() % 100 + 1;  // generar un numero aleatorio entre 1 y 100
+          int intentos = 0;
+          int numeroElegido = 0;
+        
+          std::cout << "Bienvenido a El Numero Magico!" << std::endl;
+        
+          while (numeroElegido != numeroSecreto) {
+            std::cout << "Ingresa un numero entre 1 y 100: ";
+            std::cin >> numeroElegido;
+        
+            if (std::cin.fail()) {
+              std::cout << "Ingresa un numero valido." << std::endl;
+              std::cin.clear();
+              std::cin.ignore(10000, '\n');
+              continue;
+              }
+        
+            if (numeroElegido < 1 || numeroElegido > 100) {
+               std::cout << "Ingresa un numero entre 1 y 100." << std::endl;
+               continue;
+               }
+        
+            intentos++; //sumador
+        
+            if (numeroElegido > numeroSecreto) {
+
+              std::cout << "El numero es menor." << std::endl;
+
+            } else if (numeroElegido < numeroSecreto) {
+
+              std::cout << "El numero es mayor." << std::endl;
+
+                } else {
+                    system("cls"); 
+                    std::cout <<"\n";
+                    std::cout << "////////////////////////////////////////////////////////\n";  
+                    std::cout << "//                                                    //\n"; 
+                    std::cout << "//";           	
+                    std::cout << "  Felicidades, adivinaste el numero en " << intentos << " intentos!";
+                    std::cout << "  //\n";   
+                    std::cout << "//                                                    //\n";                                                  
+                    std::cout << "////////////////////////////////////////////////////////\n"; 
+                }
+                std:: cout << "\n";
+              }
+            return 0;
+        }
+          </code></pre>
+        </div>        
+        <p class="titulo-codigo esp"> Compilamos el Codigo</p>
+        <div class="cod-lib">
+        <figure class="cont-img">
+          <img class="imagen" src="/style/image/N-Magico-1.png" alt="Adivina-el-numero">
+          <img class="imagen" src="/style/image/N-Magico-2.png" alt="Adivina-el-numero">
+        </figure>
+        </div>
+      </div>
+    </div>
+
+    
+    <footer id="footer"> 
+      <div class="footer-sup">
+        <div class="box-footer">
+          <figure>
+            <img src="/style/image/logo-titulo-removebg.png" alt="logo">            
+          </figure>
+        </div>
+
+        <div class="box-footer2">
+          <h2>SOBRE NOSOTROS</h2>
+          <p>Somos estudiantes del instituto superior de educación tecnológica</p>
+          <p>Y desarrollamos esta página web como proyecto final para las materias algoritmo I, programación I y taller de programación.</p>
+        </div>
+
+        <div class="box-footer3">
+          <h2>CONTACTO</h2>
+          <p><i class="fa-solid fa-envelope"></i> Mr.diaz430@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="footer-inf">
+        <p><small>&copy; 2023 <b>Devs EM</b> - Todos los Derechos Reservados</small></p>
+      </div>
+
+    </footer>
+  </section>
+
+  <script src="/script.js"></script>
+</body>
+</html>

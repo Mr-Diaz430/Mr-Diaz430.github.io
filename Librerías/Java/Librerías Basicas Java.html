@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Biblioteca de programación </title>   
+    <link rel="stylesheet" href="/style/style.css">   
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/306cd3ffad.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/style/image/Logo-ico.ico">
+  </head>
+
+  <body>
+    <!--MENU LATERAL-->
+    <div class="Menu-Lateral close">
+      <div class="detalles-logo">
+        <img class="logo-principal" src="/style/image/Logo.png" alt="Logo">
+        <span class="nombre-logo">Menu</span>
+      </div>
+
+      <ul class="nav-links">
+        
+      <li>
+        <a href="/index.html">
+          <i class='bx bx-home'></i>
+          <span class="nombres-link">Inicio</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="nombres-link" href="/index.html">Inicio</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="icono-link">
+          <a href="#">
+            <i class='bx bxl-c-plus-plus'></i>
+            <span class="nombres-link">C++</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+
+        <ul class="sub-menu">
+          <li><a class="nombres-link" href="#">C++</a></li>
+          <li><a href="/Librerías/C++/Librerías Básicas.html">Librerías Básicas</a></li>
+          <li><a href="/Librerías/C++/Librerías Estéticas.html">Librerías Estéticas</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="icono-link">
+          <a href="#">
+            <i class="fa-brands fa-java"></i>
+            <span class="nombres-link">Java</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        
+        <ul class="sub-menu">
+          <li><a class="nombres-link" href="#">Java</a></li>
+          <li><a href="/Librerías/Java/Librerías Basicas Java.html">Librerías Básicas</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="icono-link">
+          <a href="#">
+            <i class='fa-solid fa-gamepad'></i>     
+            <span class="nombres-link">Juegos</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i> 
+        </div>
+        <ul class="sub-menu">
+          <li><a class="nombres-link" href="#">Juegos</a></li>
+          <li><a href="/Juegos/snake.html">Snake(C++)</a></li>
+          <li><a href="/Juegos/N°-Magico.html">Número Mágico(C++)</a></li>
+          <li><a href="/Juegos/Sky Chasers.html">Sky Chasers(Scratch)</a></li>
+        </ul>
+      </li>
+
+      </ul>
+    </div>
+
+    <section class="home-section">
+        <!--MENU SUPERIOR-->
+        <div class="menu-superior">
+            <i class='bx bx-menu' ></i>
+            <span class="text">Biblioteca de programación</span>
+            <img class="logo-iset" src="/style/image/Icono-ISET.png" alt="Logo Iset">
+        </div>
+
+        <!--CONTENIDO-->
+        <div class="contenido">
+            
+            <div class="titulo-contenido">
+                <h1 class="bienvenida">&#60;Librerías Basicas (Java)/></h1>
+            </div>
+
+            <div class="cuerpo-contenido">
+                <p>Bienvenidos a la sección de Librerías básicas, aquí encontrará algunas de las librerías más importantes/usadas y sus funciones más útiles para tener en cuenta a la hora de programar y afrontar diferentes tipos de ejercicios en Java.</p>
+
+                <section class="lib-basicas">
+                  <article class="Clase_Math">  
+                    <h2 class="h2-2">Clase_Math{}</h2>
+                    <p>Esta clase representa la librería matemática de Java. Su constructor es privado, lo que nos permite crear instancias de la clase. La clase Math es una clase estática, eso quiere decir que sus funciones pueden ser utilizadas directamente desde la clase Math sin necesidad de crear una instancia de ella. Esta clase permite realizar operaciones matemáticas comunes, es importante tener en cuenta que los métodos de esta clase solo operan con tipos de datos primitivos (como int, double, etc.) y no con objetos. Algunos de los métodos más comunes incluyen:</p>
+
+                    <table>
+                        <caption>Potencia y Raiz</caption>
+                        <colgroup>
+                            <col> 
+                        </colgroup>
+                        <tr>
+                            <td>Pow</td>
+                            <td>Potencia</td>
+                        </tr>                           
+                        <tr>
+                            <td>sqrt</td>
+                            <td>Raiz Cuadrada</td>
+                        </tr>
+                        <tr>
+                            <td>cbrt</td>
+                            <td>Raiz Cubica</td>
+                        </tr>
+                    </table>
+
+                    <p class="ej-uso">Ejemplo de uso:</p>
+                    <div class="cod-lib">
+                      <pre>
+                        <code>
+      1       package math.potencia.y.raiz;
+      2      <span class="comentario">/*</span>
+      3      <span class="comentario">*   @author DM</span>
+      4      <span class="comentario">*/</span>    
+      5      public class MathPotenciaYRaiz {
+      6                      
+      7        <span class="comentario">/**</span>
+      8        <span class="comentario">* @param args the command line arguments</span>
+      9        <span class="comentario">*/</span>
+     10        public static void main(String[] args) {
+     11                               
+     12      <span class="comentario">//Tener en cuenta que Pow, sqrt y cbrt solo funcionan con valores del tipo double.</span>
+     13    
+     14         double x=25, r, r2, r3;
+     15                                
+     16         r = Math.pow(x, 2);   <span class="comentario">//Potencia.</span> 
+     17         r2 = Math.sqrt(x);   <span class="comentario">//Raiz cuadrada.</span>                    
+     18         r3 = Math.cbrt(x);   <span class="comentario">//Raiz cubica de X.</span>  
+     19                       
+     21         
+     22        System.out.println(x + " Elevado a " + 2 + " es: " + r);             
+     23        System.out.println("La raiz cuadrada de: "+x+" es: "+r2);                    
+     24        System.out.println("La raiz cubica de: "+x+" es: "+r3);
+     25                  
+     26       }   
+     27      }    
+                        </code>    
+                      </pre>   
+                    </div>
+
+
+                    <table>
+                        <caption>Mínimo y Máximo</caption>
+                        <colgroup>
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <td>min</td>
+                            <td>Devuelve el menor entre X e Y</td>
+                        </tr>
+                        <tr>
+                            <td>max</td>
+                            <td>Devuelve el mayor entre X e Y</td>
+                        </tr>
+                     </table> 
+
+                    <p class="ej-uso">Ejemplo de uso:</p>
+                    <div class="cod-lib">
+                        <pre>
+                            <code>  
+      1        package math.min.y.max;                      
+      2                           
+      3       <span class="comentario">/**</span>  
+      4       <span class="comentario">*  @author DM</span>
+      5       <span class="comentario">*/</span> 
+      6       public class MathMinYMax {  
+      7
+      8         <span class="comentario">/** </span> 
+      9         <span class="comentario">*  @param args the command line arguments</span>
+     10         <span class="comentario">*/</span>
+     11         public static void main(String[] args) {
+     12
+     13             int X=2, Y=3, R, R2;    
+     14
+     15          R = Math.min(X, Y);   <span class="comentario">//Devuelve el mayor de x e y.</span>    
+     16          R2 = Math.max(X, Y);   <span class="comentario">//Devuelve el menor de x e y.</span>
+     17
+     18          System.out.println("El numero mayor es: "+R2);
+     19          System.out.println("El numero menor es: "+R);
+     20         }
+     21       }
+                            </code> 
+                        </pre>
+                    </div> 
+
+                    <table>
+                        <caption>Valor absoluto, aleatorio y redondeo</caption>
+                        <colgroup>
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <td>abs</td>
+                            <td>Valor absoluto</td>
+                        </tr>
+                        <tr>
+                            <td>random</td>
+                            <td>Devuelve un número aleatorio entre 0 y 1</td>
+                        </tr>
+                        <tr>
+                            <td>round</td>
+                            <td>Devuelve el entero más cercano</td>
+                        </tr>
+                     </table> 
+
+                    <p class="ej-uso">Ejemplo de uso:</p>
+                    <div class="cod-lib">
+                        <pre>
+                            <code>  
+      1        package math.absoluto.aleatorio.y.redondeo;
+      2                          
+      3       <span class="comentario">/**</span>
+      4       <span class="comentario">* @author Lucas</span>
+      5       <span class="comentario">*/</span>
+      6        public class MathAbsolutoAleatorioYRedondeo {
+      7 
+      8         <span class="comentario">/**</span>
+      9         <span class="comentario">* @param args the command line arguments</span>
+     10         <span class="comentario">*/</span>
+     11           public static void main(String[] args) {
+     12             double X=-2.5, Y=2.5, NRand, NRedon, R;
+     13        
+     14        
+     15           R = Math.abs(X); <span class="comentario">//Retorna el valor absoluto de X.</span>
+     16        
+     17           NRand = Math.random(); <span class="comentario">//Retorna un numero entre 0 y 1.</span>
+     18        
+     19           NRedon = Math.round(Y); <span class="comentario">/*Retorna el entero mas cercano a Y.</span>
+     20                                                           <span class="comentario">(a partir de 0.5 redondea hacia un entero mayor)*/</span>
+     21        
+     22        
+     23           System.out.println("El valor absoluto de "+X+" es: "+R);
+     24           System.out.println("Valor aleatorio entre 0 y 1: "+NRand); 
+     25           System.out.println("El valor redondeado de "+Y+" es: "+NRedon); 
+     26      }
+     27  }                             
+                            </code> 
+                        </pre>
+                    </div> 
+
+                    <table>
+                        <caption>Grados y Radianes</caption>
+                        <colgroup>
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <td>toDegrees</td>
+                            <td>Grados a radianes</td>
+                        </tr>
+                        <tr>
+                            <td>toRadians</td>
+                            <td>Radianes a Grados</td>
+                        </tr>
+                     </table> 
+
+                    <p class="ej-uso">Ejemplo de uso:</p>
+                    <div class="cod-lib">
+                        <pre>
+                            <code>  
+      1        package math.grados.y.radianes;
+      2
+      3        <span class="comentario">/**</span>
+      4        <span class="comentario">* @author Lucas</span>
+      5        <span class="comentario">*/</span>
+      6        public class MathGradosYRadianes {
+      7                          
+      8            <span class="comentario">/**</span>
+      9            <span class="comentario">* @param args the command line arguments</span>
+     10            <span class="comentario">*/</span>
+     11             public static void main(String[] args) {
+     12                    double grad=60, rad=1.6, R, R2;
+     13                                   
+     14              <span class="comentario">//Estas 2 funciones sirven unicamente con valores de tipo double.</span>
+     15                                  
+     16               R = Math.toRadians(grad); <span class="comentario">//Retorna la conversión de grad a radianes.</span>
+     17                                 
+     18               R2= Math.toDegrees(rad);  <span class="comentario">//Retorna la conversión de rad a grados.</span> 
+     19                                   
+     20                                 
+     21               System.out.println(grad+" grados es igual a: "+R+" radianes");
+     22              System.out.println(rad+" radianes son igual a: "+R2+" grados");        
+     23            }   
+     24       } 
+                            </code> 
+                        </pre>
+                    </div> 
+                  </article>    
+                </section>
+            </div>
+        </div>   
+    <!--FOOTER-->
+    <footer id="footer"> 
+
+      <div class="footer-sup">
+        <div class="box-footer">
+          <figure>
+            <img src="/style/image/logo-titulo-removebg.png" alt="logo">            
+          </figure>
+        </div>
+
+        <div class="box-footer2">
+          <h2>SOBRE NOSOTROS</h2>
+          <p>Somos estudiantes del instituto superior de educación tecnológica</p>
+          <p>Y desarrollamos esta página web como proyecto final para las materias algoritmo I, programación I y taller de programación.</p>
+        </div>
+
+        <div class="box-footer3">
+          <h2>CONTACTO</h2>
+          <p><i class="fa-solid fa-envelope"></i> Mr.diaz430@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="footer-inf">
+        <p><small>&copy; 2023 <b>Devs EM</b> - Todos los Derechos Reservados</small></p>
+      </div>
+
+    </footer>
+  </section>
+
+  <script src="/script.js"></script>
+</body>
+</html>
